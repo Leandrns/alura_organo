@@ -1,0 +1,19 @@
+.dropdown-list {
+    display: block;
+}
+
+.dropdown-list label {
+    font-weight: 550;
+    font-size: 1.2rem;
+}
+
+.dropdown-list select {
+    margin: 8px 0;
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    box-shadow: 0 0 4px #747474;
+    border: none;
+    border-radius: 7px;
+}

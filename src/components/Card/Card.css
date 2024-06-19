@@ -1,0 +1,47 @@
+.card {
+    width: 280px;
+}
+
+.card .card-header {
+    border-radius: 10px 10px 0 0; 
+}
+
+.card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -60px;
+}
+
+.card .card-footer {
+    background: #ffffff;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 10px 10px;
+    padding-top: 75px;
+    padding-bottom: 25px;
+}
+
+.card .card-footer h4.name {
+    color: #000000;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card .card-footer h4.number {
+    font-family: 'Prata';
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+
+.card .card-footer h5 {
+    font-size: 16px;
+    line-height: 30px;
+    color: #212121;
+    padding: 0 16px;
+}

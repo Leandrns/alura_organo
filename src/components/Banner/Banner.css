@@ -5,13 +5,31 @@
 }
 
 .banner {
-    width: 100vw;
-    background-color: #6278F7;
+    height: 400px;
+    width: 100%;
+    background-color: #ff5b24;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 18px #313131;
+}
+
+.banner .slogan {
+    width: 40%;
+}
+
+.banner .slogan img {
+    margin: 0 0 25px 5px;
+    height: 50px;
+}
+
+.banner .slogan p {
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
 }
 
 .banner img {
-    width: 75%;
+    height: 70%;    
 }
