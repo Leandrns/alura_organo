@@ -49,7 +49,7 @@ export const Form = (props) => {
                     required={true} 
                     placeholder="Digite a posição do jogador"
                     value={posicao}
-                    aoAlterado={valor => setPosicao(valor)} />
+                    aoAlterado={value => setPosicao(value)} />
                 <Input 
                     label="Imagem" 
                     placeholder="Digite o endereço da imagem"

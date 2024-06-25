@@ -5,48 +5,70 @@ import { Team } from './components/Team/Team';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Corinthians',
       firstColor: '#000',
-      secondColor: '#00000030'
+      secondColor: '#a0a0a0'
     },
     {
       nome: 'São Paulo',
       firstColor: '#ff0000',
-      secondColor: '#ff000030'
+      secondColor: '#ffaaaa'
     },
     {
       nome: 'Cuiabá',
       firstColor: '#01990e',
-      secondColor: '#01990e40'
+      secondColor: '#aaeeaa'
     },
     {
       nome: 'Cruzeiro',
       firstColor: '#001aff',
-      secondColor: '#001aff28'
+      secondColor: '#aaaaee'
     },
     {
       nome: 'Atlético-MG',
       firstColor: '#1b1b1b',
-      secondColor: '#1b1b1b30'
+      secondColor: '#b0b0b0'
     },
     {
       nome: 'Fluminense',
       firstColor: '#600000',
-      secondColor: '#60000030'
+      secondColor: '#d77777'
     },
     {
       nome: 'Criciúma',
       firstColor: '#ffdd00',
-      secondColor: '#ffdd0030'
+      secondColor: '#ffddbb'
     }
-  ]
+  ])
 
   const [jogadores, setJogadores] = useState([])
 
   const aoNovoJogadorCadastrado = (jogador) => {
     setJogadores([...jogadores, jogador]);
+  }
+
+  const deletarJogador = () => {
+    console.log('Deletando jogador');
+  }
+
+  const mudarCorDoTime = (cor, nome) => {
+    setTimes(times.map(time => {
+      if(time.nome === nome) {
+        time.secondColor = cor;
+      }
+      return time;
+    }));
+  }
+
+  const mudarCorDoCard = (cor, nome) => {
+    setTimes(times.map(time => {
+      if(time.nome === nome) {
+        time.firstColor = cor;
+      }
+      return time;
+    }))
   }
 
   return (
@@ -59,7 +81,10 @@ function App() {
                             team_name={time.nome}
                             background_color={time.secondColor}
                             card_color={time.firstColor}
-                            jogadores={jogadores.filter(jogador => jogador.time === time.nome)} />)}
+                            jogadores={jogadores.filter(jogador => jogador.time === time.nome)}
+                            aoDeletar={deletarJogador}
+                            mudarCorDoTime = {mudarCorDoTime}
+                            mudarCorDoCard = {mudarCorDoCard} />)}
     </div>
   );
 }

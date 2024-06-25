@@ -3,6 +3,7 @@
     text-align: center;
     padding: 32px;
     background-color: #ffee00;
+    position: relative;
 }
 
 .team h3 {
@@ -25,4 +26,30 @@
     text-align: center;
     margin: 30px 0;
     font-family: 'Montserrat';
+}
+
+.color-input {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    background-color: #e4e4e4;
+    height: 50px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px #616161;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-input label {
+    margin-right: 8px;
+    margin-left: 10px;
+}
+
+.color-input input {
+    margin-right: 10px;
+    width: 25px;
+    border: none;
+    background-color: #e4e4e4;
 }
